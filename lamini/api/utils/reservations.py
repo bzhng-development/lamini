@@ -146,7 +146,7 @@ class Reservations:
 
         if self.current_reservation is None:
             return
-        current_time = datetime.datetime.utcnow()
+        current_time = datetime.datetime.now(datetime.UTC)
         start_time = datetime.datetime.fromisoformat(
             self.current_reservation["start_time"]
         )
@@ -214,7 +214,7 @@ class Reservations:
         """
 
         try:
-            current_time = datetime.datetime.utcnow()
+            current_time = datetime.datetime.now(datetime.UTC)
             end_time = datetime.datetime.fromisoformat(wakeup_time)
             sleep_time = end_time - current_time
             if sleep_time.total_seconds() > 0:
@@ -263,7 +263,7 @@ class Reservations:
 
         if self.current_reservation is None:
             return
-        current_time = datetime.datetime.utcnow()
+        current_time = datetime.datetime.now(datetime.UTC)
         start_time = datetime.datetime.fromisoformat(
             self.current_reservation["start_time"]
         )

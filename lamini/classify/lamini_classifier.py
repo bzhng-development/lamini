@@ -120,7 +120,7 @@ class LaminiClassifier:
             output_dir_path = "./"
         else:
             # Ensure directories in output_dir_path exist
-            os.makedirs(os.path.dirname(output_dir_path), exist_ok=True)
+            os.makedirs(output_dir_path, exist_ok=True)
             
         # Set full path to the output file
         output_path = os.path.join(output_dir_path, filename)
